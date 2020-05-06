@@ -12,12 +12,18 @@ Process: description of what function does
 Output: return value and description
 """
 
+
 def main():
     try:
         print(4/0)
+    except ZeroDivisionError:
+        print("There was a divide by zero error. Exiting.")
+        exit
+    except TypeError:
+        print("type error")
+        exit
     except:
-        print("\nThere was a divide by zero error. Exiting\n")
-        return
-    
+        print("unknown exception")
+        exit
 
-main()    
+main()
